@@ -95,3 +95,6 @@ Follow these steps to install and run the network management tool on your operat
      ```bash
      python3 manage.py runserver
   - Access at http://localhost:8000.
+# Screenshot 
+/Users/mac-404/Desktop/network-management/images/Home.png
+/Users/mac-404/Desktop/network-management/images/Edit.png
