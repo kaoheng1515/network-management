@@ -26,7 +26,8 @@ def home_view(request):
             Q(remote_ip__icontains=search_query) |
             Q(vlan__icontains=search_query) |
             Q(username__icontains=search_query) |
-            Q(link__icontains=search_query)
+            Q(link__icontains=search_query) |
+            Q(note__icontains=search_query)  # Updated
         )
 
     # Add pagination
@@ -51,8 +52,9 @@ def home_view(request):
             remote_ip = request.POST.get('remote_ip', None) or "0.0.0.0"
             vlan = request.POST.get('vlan', None)
             username = request.POST.get('username', None)
-            password = request.POST.get('password', None)  # Let the model handle the default
+            password = request.POST.get('password', None)
             link = request.POST.get('link', None)
+            note = request.POST.get('note', None)  # Updated
 
             new_device = NetworkDevice.objects.create(
                 building=building,
@@ -63,8 +65,9 @@ def home_view(request):
                 remote_ip=remote_ip,
                 vlan=vlan,
                 username=username,
-                password=password,  # Will use model default if None
+                password=password,
                 link=link,
+                note=note,  # Updated
             )
             messages.success(request, 'Device added successfully!')
             base_url = reverse('home')
@@ -82,8 +85,9 @@ def home_view(request):
             device.remote_ip = request.POST.get('remote_ip', device.remote_ip) or "0.0.0.0"
             device.vlan = request.POST.get('vlan', device.vlan)
             device.username = request.POST.get('username', device.username)
-            device.password = request.POST.get('password', device.password)  # Let the model handle the default
+            device.password = request.POST.get('password', device.password)
             device.link = request.POST.get('link', device.link)
+            device.note = request.POST.get('note', device.note)  # Updated
             device.save()
             messages.success(request, 'Device updated successfully!')
             return redirect('home')
