@@ -24,7 +24,7 @@ Follow these steps to install and run the network management tool on your operat
 
 #### Windows
 1. **Clone the Repository**:
-   - You’ll see (venv) in your prompt..
+   - You’ll see (venv) in your prompt.
    - Run:
      ```bash
      git clone https://github.com/kaoheng1515/network-management.git
@@ -35,12 +35,12 @@ Follow these steps to install and run the network management tool on your operat
      ```bash
      python -m venv venv
      venv\Scripts\activate
-3. **Install Dependencies:**:
+3. **Install Dependencies**:
    - Ensure requirements.txt exists (see below to generate it).
    - Run:
      ```bash
      pip install -r requirements.txt
-4. **Configure Environment Variables:**:
+4. **Configure Environment Variables**:
    - Create a .env file in the project root:
    - Run:
      ```bash
@@ -55,7 +55,7 @@ Follow these steps to install and run the network management tool on your operat
    - Run:
      ```bash
      python manage.py migrate
-5. **Start the Development Server:**:
+5. **Start the Development Server**:
    - Run:
      ```bash
      python manage.py runserver
@@ -67,7 +67,7 @@ Follow these steps to install and run the network management tool on your operat
      ```bash
      git clone https://github.com/kaoheng1515/network-management.git
      cd network-management
-2. **Set Up a Virtual Environment:**:
+2. **Set Up a Virtual Environment**:
    - Run:
      ```bash
      python3 -m venv venv
@@ -76,7 +76,7 @@ Follow these steps to install and run the network management tool on your operat
    - Run:
      ```bash
      pip install -r requirements.txt
-4. **Install Dependencies:**:
+4. **Install Dependencies**:
    - Create a .env file:
    - Run:
      ```bash
@@ -90,11 +90,10 @@ Follow these steps to install and run the network management tool on your operat
    - Run:
      ```bash
      python3 manage.py migrate
-6. **Start the Development Server:**:
+6. **Start the Development Server**:
    - Run:
      ```bash
      python3 manage.py runserver
   - Access at http://localhost:8000.
 # Screenshot 
-/Users/mac-404/Desktop/network-management/images/Home.png
-/Users/mac-404/Desktop/network-management/images/Edit.png
+
